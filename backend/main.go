@@ -26,7 +26,8 @@ func main() {
 	mux.HandleFunc("GET /ws", websockets.HandleConnections)
 
 	cors := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:5173"},
+		AllowedOrigins: []string{"http://localhost:5173",
+			"https://shaads-media-sequencer.vercel.app"},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"Content-Type", "Authorization"},
 		AllowCredentials: true,
